@@ -1,0 +1,5 @@
+package com.imooc.netty.websocket;
+
+public class WSserver {
+
+}

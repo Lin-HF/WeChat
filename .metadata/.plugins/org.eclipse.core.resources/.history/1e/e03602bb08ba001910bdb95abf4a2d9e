@@ -9,7 +9,6 @@ import io.netty.handler.codec.http.DefaultFullHttpResponse;
 import io.netty.handler.codec.http.FullHttpResponse;
 import io.netty.handler.codec.http.HttpHeaderNames;
 import io.netty.handler.codec.http.HttpObject;
-import io.netty.handler.codec.http.HttpRequest;
 import io.netty.handler.codec.http.HttpResponseStatus;
 import io.netty.handler.codec.http.HttpVersion;
 import io.netty.util.CharsetUtil;
@@ -22,23 +21,21 @@ public class CustomHandler extends SimpleChannelInboundHandler<HttpObject> {
 		//获取channel
 		Channel channel = ctx.channel();
 		
-		if (msg instanceof HttpRequest) {
-			//显示客户端远程地址
-			System.out.println(channel.remoteAddress());
-			
-			//定义发送的数据消息
-			ByteBuf content = Unpooled.copiedBuffer("Hello netty", CharsetUtil.UTF_8);
-			
-			//构建一个http response
-			FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, 
-					HttpResponseStatus.OK,
-					content);
-			//为响应增加数据类型和长度
-			response.headers().set(HttpHeaderNames.CONTENT_TYPE, "text/plain");
-			response.headers().set(HttpHeaderNames.CONTENT_LENGTH, content.readableBytes());
-			
-			//把响应刷到客户端
-			ctx.writeAndFlush(response);	
-		}
+		//显示客户端远程地址
+		System.out.println(channel.remoteAddress());
+		
+		//定义发送的数据消息
+		ByteBuf content = Unpooled.copiedBuffer("Hello netty", CharsetUtil.UTF_8);
+		
+		//构建一个http response
+		FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, 
+				HttpResponseStatus.OK,
+				content);
+		//为响应增加数据类型和长度
+		response.headers().set(HttpHeaderNames.CONTENT_TYPE, "text/plain");
+		response.headers().set(HttpHeaderNames.CONTENT_LENGTH, content.readableBytes());
+		
+		//把响应刷到客户端
+		ctx.writeAndFlush(response);
 	}
 }
