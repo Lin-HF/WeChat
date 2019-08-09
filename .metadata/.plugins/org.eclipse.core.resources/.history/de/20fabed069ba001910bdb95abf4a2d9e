@@ -23,7 +23,7 @@ public class WSserver {
 			future.channel().closeFuture().sync();
 		} finally {
 			mainGroup.shutdownGracefully();
-			subGroup.shutdownGracefully(); 
+			subGroup.shutdownGracefully();
 		}
 	}
 }
