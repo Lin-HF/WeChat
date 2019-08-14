@@ -1,2 +1,4 @@
 GitRepositoriesView.GitDirectories=/Users/linhaifeng1/Desktop/WeChat/.git\:
+GitRepositoriesView.GitDirectories.relative=.git\:
+core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

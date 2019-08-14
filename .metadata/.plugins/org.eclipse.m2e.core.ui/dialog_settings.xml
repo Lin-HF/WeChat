@@ -2,12 +2,10 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="com.imooc"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="imooc-netty-hello"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -34,6 +32,7 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -57,10 +56,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="imooc_netty.imooc_netty"/>
 		</list>
 		<list key="groupId">
+			<item value="imooc-netty"/>
 		</list>
 		<list key="artifactId">
+			<item value="imooc-netty"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
