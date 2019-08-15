@@ -2,10 +2,13 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.imooc"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="imooc-muxin-netty"/>
+			<item value="imooc-netty"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -56,13 +59,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="imooc_netty.imooc_netty"/>
 		</list>
 		<list key="groupId">
-			<item value="imooc-netty"/>
 		</list>
 		<list key="artifactId">
-			<item value="imooc-netty"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -74,6 +74,19 @@
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="/Volumes/Pyo/1学习资源/全栈微信/源码/资料/coding-261/后端/imooc-muxin-mybatis"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
 		</list>
 	</section>
 </section>
